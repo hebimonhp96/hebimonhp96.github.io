@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="datepicker.css" />
+    <link rel="stylesheet" href="timepicker.css" />
+    <script src="timepicker.js"></script>
+    <title>DateTimepicker</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="my-form">
+        <div class="form-group">
+          <label for="my-date-input">Select the Date</label>
+          <input
+            type="text"
+            class="datepicker-input"
+            id="my-date-input"
+            autocomplete="off"
+          />
+          <label for="time">Select the Time</label>
+          <input
+            type="text"
+            class="timepicker-input"
+            id="time"
+            autocomplete="off"
+          />
+          <script>
+            var input = document.getElementById("time");
+            new AnalogTimePicker(input);
+          </script>
+        </div>
+      </form>
+    </div>
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
